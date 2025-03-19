@@ -1,14 +1,8 @@
 {
   "builds": [
     {
-      "src": "my-portfolio/package.json",
+      "src": "my_portfolio/my-portfolio/package.json",
       "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "my-portfolio/$1"
     }
   ]
 }

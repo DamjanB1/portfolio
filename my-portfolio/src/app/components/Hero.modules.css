@@ -1,0 +1,106 @@
+.hero-vanta {
+  position: relative;
+  height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1; /* Base z-index for container */
+  color: rgb(255, 255, 255);
+  background-color: #000000 !important; /* Ensure black background */
+  overflow: hidden; /* Prevent issues with Vanta canvas */
+}
+
+.hero-vanta h1 {
+  position: relative; /* Ensure text stays above Vanta */
+  z-index: 5; /* Adjusted to 5 to stay above Vanta */
+  font-size: 3rem; /* Your original size */
+  font-weight: 600; /* Slight boldness */
+  letter-spacing: 1px; /* Subtle spacing */
+  text-shadow: 0 0 8px rgba(45, 36, 222, 0.5); /* Gentle blue glow */
+  margin-bottom: 1rem; /* Matches globals.css */
+  opacity: 1 !important; /* Force full visibility */
+}
+
+.hero-vanta h1::after {
+  content: ""; /* Pseudo-element for underline */
+  position: absolute;
+  bottom: -8px; /* Slightly below text */
+  left: 50%;
+  transform: translateX(-50%); /* Center it */
+  width: 50px; /* Short and minimal */
+  height: 2px; /* Thin line */
+  background-color: #2d24de; /* Vanta blue */
+  opacity: 0; /* Start hidden */
+  animation: fadeInUnderline 1s ease-out forwards; /* Smooth fade-in */
+}
+
+.hero-vanta p {
+  position: relative; /* Ensure text stays above Vanta */
+  z-index: 5; /* Adjusted to 5 to stay above Vanta */
+  font-size: 1.2rem; /* Your original size */
+  line-height: 1.5; /* Slight spacing for readability */
+  text-shadow: 0 0 5px rgba(45, 36, 222, 0.3); /* Very subtle glow */
+  max-width: 600px; /* Matches globals.css */
+  opacity: 1 !important; /* Force full visibility */
+}
+
+.cta-buttons {
+  z-index: 5; /* Adjusted to 5 to stay above Vanta */
+  margin-top: 20px;
+  position: relative;
+  display: flex; /* Align buttons horizontally */
+  gap: 1rem; /* Slight spacing */
+  opacity: 1 !important; /* Force full visibility */
+}
+
+.cta-button {
+  background-color: #2d24de; /* Matches Vanta dark blue */
+  color: white;
+  padding: 12px 24px; /* Slightly larger for polish */
+  border-radius: 8px; /* Softer corners */
+  text-decoration: none;
+  font-weight: 500; /* Clean and professional */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth effects */
+  opacity: 1 !important; /* Force full visibility */
+}
+
+.cta-button:hover {
+  background-color: #3b31ff; /* Lighter blue for hover contrast */
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+.cta-button.secondary {
+  background-color: transparent; /* Outline style */
+  border: 2px solid #2d24de; /* Blue border */
+  color: #2d24de; /* Blue text */
+}
+
+.cta-button.secondary:hover {
+  background-color: #2d24de; /* Fills with Vanta blue */
+  color: white;
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+/* Vanta Canvas Fix */
+.hero-vanta canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0; /* Ensure it stays behind text */
+  pointer-events: none;
+}
+
+/* Animation for Underline */
+@keyframes fadeInUnderline {
+  from {
+    opacity: 0;
+    width: 0; /* Start small */
+  }
+  to {
+    opacity: 0.7; /* Slightly translucent */
+    width: 50px; /* End width */
+  }
+}

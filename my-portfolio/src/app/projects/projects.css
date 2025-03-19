@@ -1,0 +1,311 @@
+.projects-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.projects-section h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.projects-section h1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Black underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.projects-section h1:hover::after {
+  width: 100%; /* Expands the underline when hovered */
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 900px;
+  width: 100%;
+  align-items: center;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+}
+
+.project-card h2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Black underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.project-card h2:hover::after {
+  width: 100%; /* Expands the underline when hovered */
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.project-media {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Video/GIF container with left-right layout */
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Left video box (smaller size) */
+.video-box.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%; /* Default width for larger screens */
+  max-width: 350px; /* Reduced size for the left video box */
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-height: 350px; /* Limit the height for PC to avoid stretching */
+  overflow: hidden; /* Prevents overflow of content if it is too large */
+}
+
+/* Right video box (larger size) */
+.video-box.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%; /* Default width for larger screens */
+  max-width: 600px; /* Adjusted size for the right video box */
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-height: 500px; /* Maintain the original size */
+  overflow: hidden;
+}
+
+/* Video/GIF labels */
+.video-label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 8px;
+  text-align: center;
+  font-style: italic;
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centers the image */
+}
+
+.project-gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centers the GIF */
+}
+
+/* Ensuring videos align properly */
+.project-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 15px;
+  }
+
+  .projects-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .project-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* Stack videos/GIFs on smaller screens */
+  .video-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-box {
+    width: 100%;
+    max-width: none; /* Resets max-width on mobile */
+    padding: 10px;
+  }
+
+  .project-img,
+  .project-gif,
+  .project-video {
+    max-width: 100%;
+  }
+}
+
+/* Styles for all project cards on PC */
+@media (min-width: 769px) {
+  .project-card {
+    max-width: 900px; /* Match Filmpire's size */
+    padding: 45px; /* Match Filmpire's spacing */
+  }
+
+  .project-card .project-img {
+    max-width: 700px; /* Default larger image for all cards */
+    margin-bottom: 30px; /* More spacing below image */
+  }
+
+  /* Specific override for Filmpire image */
+  .filmpire-card .project-img {
+    max-width: 800px; /* Bigger image for Filmpire */
+  }
+
+  .project-card p {
+    margin-bottom: 35px; /* More spacing below paragraph */
+    max-width: 800px; /* Wider text area for better readability */
+  }
+
+  .project-card .project-link {
+    padding: 14px 30px; /* Slightly larger button */
+  }
+}
+
+/* Ensure GIFs are centered on PC */
+@media (min-width: 769px) {
+  .fun-project .video-box {
+    margin: 0 auto; /* Centers the GIF boxes within their container */
+  }
+
+  /* Center the calculator and weather app GIFs */
+  .project-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

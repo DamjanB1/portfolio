@@ -1,0 +1,44 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px; /* Slightly higher for balance */
+  right: 20px;
+  z-index: 1000;
+}
+
+.scroll-button {
+  width: 50px;
+  height: 50px;
+  background-color: #0b1623; /* Matte black */
+  border: 2px solid #1c3d5a; /* Navy blue border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff; /* Clean white arrow */
+  transition: transform 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: #1c3d5a; /* Dark navy hover */
+  border-color: #c8a753; /* Soft gold accent border */
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-button:hover svg {
+  transform: translateY(-2px); /* Nice little lift on hover */
+}
+
+.scroll-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(28, 61, 90, 0.4);
+}

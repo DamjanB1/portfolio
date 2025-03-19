@@ -1,0 +1,162 @@
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9; /* Matches About/Projects */
+}
+
+.contact-form {
+  background-color: #fff; /* White card like About/Projects */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #ccc; /* Stronger border for form */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start position off-screen */
+  animation: fadeInUp 1s ease-out forwards; /* Apply animation once */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start 30px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-70px); /* End 70px higher than the initial position */
+  }
+}
+
+.contact-form h1 {
+  font-size: 2.5rem; /* Slightly larger than About h2 */
+  color: #333; /* Matches About/Projects text */
+  margin-bottom: 20px;
+}
+
+.form-input {
+  background-color: #fff; /* White background */
+  color: #555; /* Matches About/Projects text */
+  padding: 14px 20px;
+  margin: 15px 0;
+  width: 100%;
+  border-radius: 8px; /* Slightly smaller radius */
+  border: 2px solid #ccc; /* Stronger border (2px thick) */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff; /* Blue accent like cta-button */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Blue glow */
+}
+
+.form-input.error {
+  border-color: #ff3333; /* Keep red for errors */
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
+  animation: shake 0.4s ease-in-out;
+}
+
+.form-input::placeholder {
+  color: #999; /* Lighter gray for placeholder */
+  opacity: 1;
+}
+
+.submit-btn {
+  background-color: #007bff; /* Blue like cta-button */
+  color: #fff;
+  padding: 12px 40px; /* Slightly adjusted padding */
+  border-radius: 8px; /* Matches form-input */
+  border: none;
+  font-size: 1.2rem; /* Slightly smaller than original */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Matches cta-button hover */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.error-message {
+  color: #ff3333; /* Keep red for errors */
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 30px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form h1 {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  font-size: 60px; /* Icon size */
+  color: #25D366; /* WhatsApp green */
+  background-color: #fff; /* White background */
+  padding: 10px;
+  border-radius: 50%; /* Round shape */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Chat Popup */
+.whatsapp-popup {
+  position: absolute;
+  bottom: 80px; /* Adjust the distance from the WhatsApp icon */
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+}
+
+.whatsapp-float:hover .whatsapp-popup {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,24 @@
+.landing-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Above Vanta (0) and Hero content (5) */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; /* Prevents interaction after fade */
+}
+
+.landing-loader.fade-out {
+  opacity: 0;
+}
+
+/* Ensure loader is interactive only when visible */
+.home-page .landing-loader:not(.fade-out) {
+  pointer-events: auto;
+}

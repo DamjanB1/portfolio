@@ -1,0 +1,194 @@
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Reduced for mobile, adjusted for PC below */
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.profile-img {
+  width: 200px; /* Smaller default for mobile */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-info {
+  max-width: 800px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.about-title {
+  font-size: 2.5rem; /* Smaller default for mobile */
+  color: #333;
+  margin-bottom: 15px;
+  margin-top: 0; /* Reset for mobile */
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-info p {
+  font-size: 1.1rem; /* Smaller default for mobile */
+  color: #555;
+  margin-bottom: 15px; /* Reduced for tighter spacing */
+  text-align: center; /* Centered by default for mobile */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center; /* Centers the button */
+}
+
+.cta-button {
+  margin-top: 10px; /* Default for mobile */
+  padding: 10px 30px; /* Smaller padding for mobile */
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+  box-shadow: 0 6px 15px rgba(0, 91, 191, 0.4);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Desktop layout (matches your preferred PC version) */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 70px; /* Your preferred spacing */
+    margin-top: -40px; /* Your preferred offset */
+  }
+
+  .about-card {
+    transform: translateX(30px); /* Your preferred transform */
+    margin-right: 60px; /* Your preferred spacing */
+  }
+
+  .profile-img {
+    width: 240px; /* Your preferred size */
+    height: 240px;
+  }
+
+  .about-info {
+    transform: translateX(30px); /* Your preferred transform */
+  }
+
+  .about-title {
+    font-size: 3.4rem; /* Your preferred size */
+    margin-top: -30px; /* Your preferred offset */
+    transform: translateX(-220px); /* Your preferred transform */
+  }
+
+  .about-info p {
+    font-size: 1.2rem;
+    text-align: justify; /* Your preferred alignment */
+    margin-bottom: 20px; /* Your preferred spacing */
+  }
+
+  .cta-button {
+    margin-top: 20px; /* Your preferred spacing */
+    padding: 12px 40px; /* Your preferred size */
+    font-size: 1.2rem;
+    transform: translateX(-240px); /* Your preferred transform */
+  }
+
+  .cta-button:hover {
+    transform: translateX(-240px) scale(1.05); /* Your preferred hover effect */
+  }
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 767px) {
+  .about-section {
+    padding: 30px 15px 80px 15px; /* Added bottom padding to push content above footer */
+  }
+
+  .about-content {
+    gap: 30px; /* Tighter gap for mobile */
+  }
+
+  .about-card {
+    max-width: 250px; /* Smaller for mobile */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the content horizontally */
+    justify-content: center;  /* Center the content vertically */
+  }
+
+  .profile-img {
+    width: 180px; /* Smaller for very small screens */
+    height: 180px;
+  }
+
+  .about-title {
+    font-size: 2rem; /* Smaller for mobile */
+  }
+
+  .about-info p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    margin-top: 5px; /* Raised further on mobile */
+    padding: 10px 25px; /* Slightly smaller for mobile */
+    font-size: 1rem;
+  }
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}

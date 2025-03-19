@@ -1,0 +1,127 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Black background for the navbar */
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+}
+
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white; /* White text for the logo */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #ff3f81; /* Change logo color on hover */
+  transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* More spacing between navigation items */
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; /* White text for navigation links */
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a49a9d; /* Pink underline */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out; /* Smooth effect for underline */
+}
+
+.navbar a:hover {
+  color: #1c02c3; /* Change link color on hover */
+  transform: translateY(-2px); /* Lift the link slightly */
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Reveal underline on hover */
+}
+
+body {
+  padding-top: 70px; /* Add space at the top to prevent content from hiding behind the navbar */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #000; /* Navbar background color */
+  position: absolute;
+  top: 60px; /* Position the menu below the navbar */
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Hide normal navbar items on mobile */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu icon */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show the menu on toggle */
+  }
+}

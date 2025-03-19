@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/my-portfolio/$1"
+      "dest": "my-portfolio/$1"
     }
   ]
 }

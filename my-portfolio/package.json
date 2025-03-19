@@ -13,7 +13,7 @@
     "ldrs": "^1.1.2",
     "lenis": "^1.2.3",
     "lucide-react": "^0.0.1",
-    "next": "^15.2.2",
+    "next": "^15.2.3",
     "nodemailer": "^6.10.0",
     "react": "^18.0.0",
     "react-confetti": "^6.4.0",
